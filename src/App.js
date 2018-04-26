@@ -2,7 +2,7 @@
  * @Author: Ali
  * @Date:   2018-04-25T22:06:52+02:00
  * @Last modified by:   Ali
- * @Last modified time: 2018-04-26T17:48:50+02:00
+ * @Last modified time: 2018-04-26T17:50:49+02:00
  */
 
 import React, { Component } from 'react'
@@ -36,7 +36,7 @@ componentDidMount() {
     }
     console.log(this.state.pixaBay.hits)
     return(
-      <Grid data={this.state.pixaBay}/>
+      <Grid data={this.state.pixaBay.hits}/>
     )
   }
 }
