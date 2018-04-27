@@ -2,10 +2,11 @@
  * @Author: Ali
  * @Date:   2018-04-26T15:09:30+02:00
  * @Last modified by:   Ali
- * @Last modified time: 2018-04-27T14:22:29+02:00
+ * @Last modified time: 2018-04-27T15:17:43+02:00
  */
 import React,{ Component } from 'react'
-import { Fa, Card, CardBody, CardImage, CardTitle } from 'mdbreact'
+import { Card, Icon, Image } from 'semantic-ui-react'
+
 class Grid extends Component {
 
   render(){
@@ -17,20 +18,11 @@ class Grid extends Component {
       const list = this.props.data.map(block =>
         <ul key={block.id}>
           <Card>
-            <CardImage className="img-fluid" src={block.webformatURL} alt={block.user} />
-            <CardBody>
-              <CardTitle>
-                {block.user}
-              </CardTitle>
-            </CardBody>
-            <div className="card-data">
-              <ul>
-                <li><Fa icon="fa-heart"></Fa>{block.likes}</li>
-                <li><Fa icon="fa-eye"></Fa>{block.views}</li>
-                <li><Fa icon="fa-download"></Fa>{block.downloads}</li>
-                <li><Fa icon="fa-commenting"></Fa>{block.comments}</li>
-              </ul>
-            </div>
+            <Card.Header>
+              {block.user}
+              <br />
+              <Image src={block.webformatURL} />
+            </Card.Header>
           </Card>
         </ul>
       )
@@ -40,3 +32,22 @@ class Grid extends Component {
   }
 }
 export default Grid
+
+/*
+<Card>
+  <CardImage className="img-fluid" src={block.webformatURL} alt={block.user} />
+  <CardBody>
+    <CardTitle>
+      {block.user}
+    </CardTitle>
+  </CardBody>
+  <div className="card-data">
+    <ul>
+      <li><Fa icon="fa-heart"></Fa>{block.likes}</li>
+      <li><Fa icon="fa-eye"></Fa>{block.views}</li>
+      <li><Fa icon="fa-download"></Fa>{block.downloads}</li>
+      <li><Fa icon="fa-commenting"></Fa>{block.comments}</li>
+    </ul>
+  </div>
+</Card>
+*/
