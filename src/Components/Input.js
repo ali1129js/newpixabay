@@ -2,15 +2,9 @@
  * @Author: Ali
  * @Date:   2018-04-26T20:06:29+02:00
  * @Last modified by:   Ali
- * @Last modified time: 2018-04-28T15:28:08+02:00
+ * @Last modified time: 2018-04-28T22:00:16+02:00
  */
 import React,{Component,Fragment} from 'react'
-
-
-
-
-
-
 class Input extends Component {
   constructor(){
     super()
@@ -28,6 +22,7 @@ class Input extends Component {
       method:'GET'
     }
     e.preventDefault()
+    e.target.reset()
     fetch(endpoint, fetchOption)
     .then(d => d.json())
     .then(d => {
@@ -49,6 +44,7 @@ class Input extends Component {
             placeholder="Enter your search"
             ref='input'
             className="form-control"
+            onChange={this.props.handleInput.bind(this)}
           />
           <button type='submit' className="btn btn-success"> Search PixaBay </button>
         </form>
