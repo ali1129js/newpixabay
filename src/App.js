@@ -2,16 +2,18 @@
  * @Author: Ali
  * @Date:   2018-04-25T22:06:52+02:00
  * @Last modified by:   Ali
- * @Last modified time: 2018-04-28T11:31:54+02:00
+ * @Last modified time: 2018-04-28T15:41:23+02:00
  */
+
 import React, { Component, Fragment } from 'react'
 import Input from './Components/Input'
-import Grid2 from './Components/Grid2'
+import Grid from './Components/Grid'
+import './App.css'
 
-
-const pixabayapi = "https://pixabay.com/api/?key=8804245-155ed4ab1b84647eeb9fbf6ad"
-const searchTerm = encodeURIComponent('cool')
-const endpoint =pixabayapi+"&q="+searchTerm
+const pixabayapi = "https://pixabay.com/api/?key="
+const API_KEY = '8804245-155ed4ab1b84647eeb9fbf6ad'
+const searchTerm = encodeURIComponent('rose')
+const endpoint = pixabayapi+API_KEY+"&q="+searchTerm
 const fetchOption = {
   method:'GET'
 }
@@ -19,25 +21,22 @@ class App extends Component {
   constructor (){
     super()
     this.state = {
-
     }
-    this.handleInput = this.handleInput.bind(this)
   }
 componentDidMount() {
-    fetch(endpoint, fetchOption)
-    .then(d => d.json())
-    .then(d => {
-      this.setState({pixaBay:d})
-    })
-    .catch(err => {
-      console.error(err);
-    })
-  }
-  handleInput(endpoint){
-    this.setState({
-      endpoint:endpoint
-    })
-  }
+ this.loaddata()
+}
+loaddata(){
+  fetch(endpoint, fetchOption)
+  .then(d => d.json())
+  .then(d => {
+    this.setState({pixaBay:d})
+  })
+  .catch(err => {
+    console.error(err);
+  })
+}
+
   render() {
     if(!this.state.pixaBay){
       return <div className="loading">loading</div>
@@ -47,7 +46,7 @@ componentDidMount() {
       <Fragment>
         <div className="container">
           <Input handleInput={this.handleInput}/>
-          <Grid2 data={this.state.pixaBay.hits}/>
+          <Grid data={this.state.pixaBay.hits}/>
         </div>
       </Fragment>
     )

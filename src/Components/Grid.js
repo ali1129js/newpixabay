@@ -1,47 +1,46 @@
 /**
  * @Author: Ali
- * @Date:   2018-04-28T11:38:32+02:00
+ * @Date:   2018-04-26T15:09:30+02:00
  * @Last modified by:   Ali
- * @Last modified time: 2018-04-28T14:04:30+02:00
+ * @Last modified time: 2018-04-28T15:06:06+02:00
  */
+import React,{ Component } from 'react'
+import { Card } from 'material-ui'
+class Grid extends Component {
 
-import React, { Component } from 'react'
-import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card'
-import RaisedButton from 'material-ui/RaisedButton'
-
-class UsersGrid extends Component {
   render(){
-    const { data  } = this.props
-    let cardList = []
-
-        <Card
-          key={card.id}
-          expandable={true}
-          onExpandChange={() => console.log('onExpandChange Called!')}
-          zDepth={4}
-        >
-          <CardHeader
-            actAsExpander={true}
-            title={card.user}
-            avatar={card.userImageURL}
-          />
-          <CardMedia>
-            <img src={card.webformatURL} width='350px' height='350px' alt={card.views} />
-          </CardMedia>
-          <CardTitle
-            title={card.type}
-            actAsExpander={true}
-            showExpandableButton={true}
-          />
-          <CardText expandable={true}>
-            {card.tags}
-          </CardText>
-        </Card>
+    if(!this.props.data){
+      return(
+        <div>loading...</div>
       )
-    })
+      }
+      const list = this.props.data.map(block =>
+        <ul key={block.id}>
+          <Card >
+            <img src={block.webformatURL} alt={block.user} />
+            <div>
+              <div>
+                {block.user}
+              </div>
+            </div>
+            <div className="card-data">
+              <ul>
+                <li>{block.likes}</li>
+                <li>{block.views}</li>
+                <li>{block.downloads}</li>
+                <li>{block.comments}</li>
+              </ul>
+            </div>
+          </Card>
+        </ul>
+      )
     return(
-      <div className="grdd">{ cardList }</div>
-      )
+      <ul> {list} </ul>
+    )
   }
 }
-export default UsersGrid
+export default Grid
+
+/*
+style={{display: "inline-flex", width:300, height:300,margin:5}}
+*/
