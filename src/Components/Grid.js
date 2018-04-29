@@ -2,7 +2,7 @@
  * @Author: Ali
  * @Date:   2018-04-26T15:09:30+02:00
  * @Last modified by:   Ali
- * @Last modified time: 2018-04-29T12:48:28+02:00
+ * @Last modified time: 2018-04-29T13:11:29+02:00
  */
 import React,{ Component } from 'react'
 import { Card, CardHeader } from 'material-ui'
@@ -28,10 +28,10 @@ class Grid extends Component {
             </div>
             <div className="card-data">
               <ul>
-                <li>{block.likes}</li>
-                <li>{block.views}</li>
-                <li>{block.downloads}</li>
-                <li>{block.comments}</li>
+                <li>{block.likes} Likes</li>
+                <li>{block.views} views</li>
+                <li>{block.downloads} downloads</li>
+                <li>{block.comments} comments</li>
               </ul>
             </div>
           </Card><br />
