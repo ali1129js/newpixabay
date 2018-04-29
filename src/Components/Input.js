@@ -2,7 +2,7 @@
  * @Author: Ali
  * @Date:   2018-04-26T20:06:29+02:00
  * @Last modified by:   Ali
- * @Last modified time: 2018-04-28T22:00:16+02:00
+ * @Last modified time: 2018-04-29T12:57:14+02:00
  */
 import React,{Component,Fragment} from 'react'
 class Input extends Component {
@@ -26,25 +26,28 @@ class Input extends Component {
     fetch(endpoint, fetchOption)
     .then(d => d.json())
     .then(d => {
-      this.setState({pixaBay:d})
+      // setState takes a second parameter , a callback function!
+      this.setState({pixaBay:d},() => {
+        this.props.handleSubmit(this.state.pixaBay)
+      })
     })
     .catch(err => {
       console.error(err);
     })
-
   }
   render(){
     return (
       <Fragment>
         <form
           className="form-group"
-          onSubmit={this.onSubmit}>
+          onSubmit={this.onSubmit}
+        >
           <input
             type="text"
             placeholder="Enter your search"
             ref='input'
             className="form-control"
-            onChange={this.props.handleInput.bind(this)}
+            onChange={this.props.handleInput}
           />
           <button type='submit' className="btn btn-success"> Search PixaBay </button>
         </form>

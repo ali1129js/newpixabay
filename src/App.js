@@ -2,7 +2,7 @@
  * @Author: Ali
  * @Date:   2018-04-25T22:06:52+02:00
  * @Last modified by:   Ali
- * @Last modified time: 2018-04-28T17:24:22+02:00
+ * @Last modified time: 2018-04-29T13:01:22+02:00
  */
 
 import React, { Component, Fragment } from 'react'
@@ -36,9 +36,14 @@ loaddata(){
     console.error(err);
   })
 }
-handleInput(event) {
-event.preventDefault();
-this.setState({ search: event.target.value })
+
+handleInput(e) {
+e.preventDefault()
+this.setState({ search: e.target.value })
+}
+handleSubmit(pixaBay){
+  this.setState({pixaBay:pixaBay})
+  console.log('Hello Submit')
 }
   render() {
     if(!this.state.pixaBay){
@@ -48,7 +53,10 @@ this.setState({ search: event.target.value })
     return(
       <Fragment>
         <div className="container">
-          <Input handleInput={this.handleInput.bind(this)}/>
+          <Input
+            handleInput={this.handleInput.bind(this)}
+            handleSubmit={this.handleSubmit.bind(this)}
+          />
           {this.state.search}
           <Grid data={this.state.pixaBay.hits}/>
         </div>

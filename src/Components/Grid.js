@@ -2,12 +2,12 @@
  * @Author: Ali
  * @Date:   2018-04-26T15:09:30+02:00
  * @Last modified by:   Ali
- * @Last modified time: 2018-04-28T15:06:06+02:00
+ * @Last modified time: 2018-04-29T12:48:28+02:00
  */
 import React,{ Component } from 'react'
-import { Card } from 'material-ui'
-class Grid extends Component {
+import { Card, CardHeader } from 'material-ui'
 
+class Grid extends Component {
   render(){
     if(!this.props.data){
       return(
@@ -16,11 +16,14 @@ class Grid extends Component {
       }
       const list = this.props.data.map(block =>
         <ul key={block.id}>
-          <Card >
+          <Card>
+            <CardHeader
+              title={block.user}
+            />
             <img src={block.webformatURL} alt={block.user} />
             <div>
               <div>
-                {block.user}
+                <span> {block.tags} </span>
               </div>
             </div>
             <div className="card-data">
@@ -31,7 +34,7 @@ class Grid extends Component {
                 <li>{block.comments}</li>
               </ul>
             </div>
-          </Card>
+          </Card><br />
         </ul>
       )
     return(
