@@ -2,10 +2,11 @@
  * @Author: Ali
  * @Date:   2018-04-26T15:09:30+02:00
  * @Last modified by:   Ali
- * @Last modified time: 2018-04-29T13:11:29+02:00
+ * @Last modified time: 2018-04-30T14:39:22+02:00
  */
 import React,{ Component } from 'react'
 import { Card, CardHeader } from 'material-ui'
+import Avatar from 'material-ui/Avatar';
 
 class Grid extends Component {
   render(){
@@ -17,9 +18,7 @@ class Grid extends Component {
       const list = this.props.data.map(block =>
         <ul key={block.id}>
           <Card>
-            <CardHeader
-              title={block.user}
-            />
+            <Avatar src={block.userImageURL} />
             <img src={block.webformatURL} alt={block.user} />
             <div>
               <div>
