@@ -2,7 +2,7 @@
  * @Author: Ali
  * @Date:   2018-04-26T20:06:29+02:00
  * @Last modified by:   Ali
- * @Last modified time: 2018-04-29T12:57:14+02:00
+ * @Last modified time: 2018-05-01T16:05:22+02:00
  */
 import React,{Component,Fragment} from 'react'
 class Input extends Component {
@@ -44,7 +44,7 @@ class Input extends Component {
         >
           <input
             type="text"
-            placeholder="Enter your search"
+            placeholder="search Term e.g: cars, dogs "
             ref='input'
             className="form-control"
             onChange={this.props.handleInput}
