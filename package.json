@@ -2,7 +2,7 @@
   "name": "pixabayfetch",
   "version": "0.1.0",
   "private": true,
-  "homepage": "ali1129js.github.io/pixaBayFetchLive",
+  "homepage": "https://ali1129js.github.io/pixaBayFetchLive/",
   "dependencies": {
     "material-ui": "^1.0.0-beta.42",
     "react": "^16.3.2",
@@ -15,7 +15,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build -- 'WTF is this?'",
   },
   "devDependencies": {
     "gh-pages": "^1.1.0"
