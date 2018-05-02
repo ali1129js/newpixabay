@@ -2,21 +2,24 @@
  * @Author: Ali
  * @Date:   2018-04-28T14:57:28+02:00
  * @Last modified by:   Ali
- * @Last modified time: 2018-05-02T10:44:31+02:00
+ * @Last modified time: 2018-05-02T12:15:35+02:00
  */
  body {
-   padding: 0;
+   padding:auto;
+   margin:auto;
  }
  ul {
-     overflow: auto;
+    padding: 0 0 0 0;
+    overflow: auto;
  }
  ul li {
     list-style-type: none;
      float: left;
      border: 1px solid blue;
-     padding: 0px;
-     margin: 2 2 2 0;
+     padding: 0 0 0 0;
+     margin: 5 1 2 1;
  }
+
  /*
 margin: 25px 50px 75px 100px;
       top, right,bottom, left
