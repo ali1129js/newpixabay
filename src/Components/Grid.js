@@ -2,10 +2,10 @@
  * @Author: Ali
  * @Date:   2018-04-26T15:09:30+02:00
  * @Last modified by:   Ali
- * @Last modified time: 2018-04-30T14:39:22+02:00
+ * @Last modified time: 2018-05-02T10:36:17+02:00
  */
 import React,{ Component } from 'react'
-import { Card, CardHeader } from 'material-ui'
+import { Card } from 'material-ui'
 import Avatar from 'material-ui/Avatar';
 
 class Grid extends Component {
@@ -19,11 +19,13 @@ class Grid extends Component {
         <ul key={block.id}>
           <Card>
             <Avatar src={block.userImageURL} />
-            <img src={block.webformatURL} alt={block.user} />
+            <img
+              src={block.largeImageURL}
+              alt={block.user}
+              height="270"
+              width="480"
+            />
             <div>
-              <div>
-                <span> {block.tags} </span>
-              </div>
             </div>
             <div className="card-data">
               <ul>
@@ -42,7 +44,3 @@ class Grid extends Component {
   }
 }
 export default Grid
-
-/*
-style={{display: "inline-flex", width:300, height:300,margin:5}}
-*/
