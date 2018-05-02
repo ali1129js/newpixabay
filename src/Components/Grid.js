@@ -2,13 +2,20 @@
  * @Author: Ali
  * @Date:   2018-04-26T15:09:30+02:00
  * @Last modified by:   Ali
- * @Last modified time: 2018-05-02T12:12:42+02:00
+ * @Last modified time: 2018-05-02T12:38:52+02:00
  */
 import React,{ Component } from 'react'
 import { Card } from 'material-ui'
 import Avatar from 'material-ui/Avatar';
 import Paper from 'material-ui/Paper'
+const style = {
+  background:'lightgray',
+  height:305,
+  width:400,
+  margin:6
+}
 class Grid extends Component {
+
   render(){
     if(!this.props.data){
       return(
@@ -16,8 +23,7 @@ class Grid extends Component {
       )
       }
       const list = this.props.data.map(block =>
-        <ul key={block.id}>
-          <Card style={{height:305,width:400}} zDepth={5} >
+        <Card key={block.id} style={style} zDepth={5} >
             <Avatar src={block.userImageURL} />
             <img
               src={block.largeImageURL}
@@ -36,12 +42,9 @@ class Grid extends Component {
               </ul>
             </div>
           </Card>
-        </ul>
-      )
+        )
     return(
-      <ul>
         <Paper zDepth={2}> {list} </Paper>
-        </ul>
     )
   }
 }

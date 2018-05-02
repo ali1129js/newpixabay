@@ -2,14 +2,13 @@
  * @Author: Ali
  * @Date:   2018-04-28T14:57:28+02:00
  * @Last modified by:   Ali
- * @Last modified time: 2018-05-02T12:15:35+02:00
+ * @Last modified time: 2018-05-02T12:41:47+02:00
  */
  body {
    padding:auto;
    margin:auto;
  }
  ul {
-    padding: 0 0 0 0;
     overflow: auto;
  }
  ul li {
@@ -17,9 +16,9 @@
      float: left;
      border: 1px solid blue;
      padding: 0 0 0 0;
-     margin: 5 1 2 1;
- }
+     margin: 10 20 0 20;
 
+ }
  /*
 margin: 25px 50px 75px 100px;
       top, right,bottom, left
