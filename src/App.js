@@ -2,7 +2,7 @@
  * @Author: Ali
  * @Date:   2018-04-25T22:06:52+02:00
  * @Last modified by:   Ali
- * @Last modified time: 2018-05-03T13:30:45+02:00
+ * @Last modified time: 2018-05-03T20:56:11+02:00
  */
 
 import React, { Component, Fragment } from 'react'
@@ -50,12 +50,12 @@ handleSubmit(pixaBay){
     }
     return(
       <Fragment>
-        <div className="container-fluid">
+        <div className="container">
           <Input
             handleInput={this.handleInput.bind(this)}
             handleSubmit={this.handleSubmit.bind(this)}
           />
-          <h2> {this.state.search} </h2>
+          <h4> {this.state.search} </h4>
           <Grid data={this.state.pixaBay.hits}/>
         </div>
       </Fragment>

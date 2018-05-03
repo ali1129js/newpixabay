@@ -2,7 +2,7 @@
  * @Author: Ali
  * @Date:   2018-04-26T20:06:29+02:00
  * @Last modified by:   Ali
- * @Last modified time: 2018-05-01T16:05:22+02:00
+ * @Last modified time: 2018-05-03T20:54:51+02:00
  */
 import React,{Component,Fragment} from 'react'
 class Input extends Component {
@@ -49,7 +49,9 @@ class Input extends Component {
             className="form-control"
             onChange={this.props.handleInput}
           />
-          <button type='submit' className="btn btn-success"> Search PixaBay </button>
+          <button type='submit' className="btn btn-success">
+            Search PixaBay
+          </button>
         </form>
       </Fragment>
     )
