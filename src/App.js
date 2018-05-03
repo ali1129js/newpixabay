@@ -2,7 +2,7 @@
  * @Author: Ali
  * @Date:   2018-04-25T22:06:52+02:00
  * @Last modified by:   Ali
- * @Last modified time: 2018-05-02T10:07:29+02:00
+ * @Last modified time: 2018-05-03T13:30:45+02:00
  */
 
 import React, { Component, Fragment } from 'react'
@@ -50,7 +50,7 @@ handleSubmit(pixaBay){
     }
     return(
       <Fragment>
-        <div className="app">
+        <div className="container-fluid">
           <Input
             handleInput={this.handleInput.bind(this)}
             handleSubmit={this.handleSubmit.bind(this)}
