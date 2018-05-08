@@ -2,13 +2,16 @@
  * @Author: Ali
  * @Date:   2018-04-25T22:06:52+02:00
  * @Last modified by:   Ali
- * @Last modified time: 2018-05-03T20:59:18+02:00
+ * @Last modified time: 2018-05-08T16:08:37+02:00
  */
 
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
+//import AppBar from './Components/AppBar'
 import Input from './Components/Input'
 import Grid from './Components/Grid'
+
 import './App.css'
+
 
 const pixabayapi = "https://pixabay.com/api/?key="
 const API_KEY = '8804245-155ed4ab1b84647eeb9fbf6ad'
@@ -17,6 +20,7 @@ const endpoint = pixabayapi+API_KEY+"&q="+searchTerm
 const fetchOption = {
   method:'GET'
 }
+
 class App extends Component {
   constructor (){
     super()
@@ -36,7 +40,6 @@ loaddata(){
     console.error(err);
   })
 }
-
 handleInput(e) {
 e.preventDefault()
 this.setState({ search: e.target.value })
@@ -49,18 +52,16 @@ handleSubmit(pixaBay){
       return <div className="loading">loading</div>
     }
     return(
-      <Fragment>
-        <div className="container-fluid">
-          <Input
-            handleInput={this.handleInput.bind(this)}
-            handleSubmit={this.handleSubmit.bind(this)}
-          />
-          <h4> {this.state.search} </h4>
-          <Grid data={this.state.pixaBay.hits}/>
-        </div>
-      </Fragment>
+      <MuiThemeProvider theme={theme}>
+        <AppBar title="My AppBar" />
+        <Input
+          handleInput={this.handleInput.bind(this)}
+          handleSubmit={this.handleSubmit.bind(this)}
+        />
+        <h4> {this.state.search} </h4>
+        <Grid data={this.state.pixaBay.hits}/>
+      </MuiThemeProvider>
     )
   }
 }
-
 export default App

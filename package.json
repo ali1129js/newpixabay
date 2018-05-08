@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://ali1129js.github.io/pixaBayFetchLive/",
   "dependencies": {
-    "material-ui": "^1.0.0-beta.42",
+    "mdbreact": "^4.3.0",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "react-scripts": "1.1.4"
