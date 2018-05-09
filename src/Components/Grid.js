@@ -2,15 +2,13 @@
  * @Author: Ali
  * @Date:   2018-05-09T21:21:58+02:00
  * @Last modified by:   Ali
- * @Last modified time: 2018-05-09T21:23:12+02:00
+ * @Last modified time: 2018-05-09T22:45:19+02:00
  */
 
 import React,{ Component } from 'react'
 const style = {
   background:'silver',
-  height:310,
-  width:310,
-  margin:8,
+  margin:5,
 }
 class Grid extends Component {
 
@@ -28,8 +26,8 @@ class Grid extends Component {
       </div>
   )
     return(
-      <div className="container">
-        <div className="row">
+      <div className="d-sm-flex bd-highlight">
+        <div className="p-2 flex-fill bd-highlight">
           {list}
         </div>
       </div>
