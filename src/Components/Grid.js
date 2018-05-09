@@ -1,11 +1,17 @@
 /**
  * @Author: Ali
- * @Date:   2018-04-26T15:09:30+02:00
+ * @Date:   2018-05-09T21:21:58+02:00
  * @Last modified by:   Ali
- * @Last modified time: 2018-05-09T20:25:54+02:00
+ * @Last modified time: 2018-05-09T21:23:12+02:00
  */
-import React,{ Component } from 'react'
 
+import React,{ Component } from 'react'
+const style = {
+  background:'silver',
+  height:310,
+  width:310,
+  margin:8,
+}
 class Grid extends Component {
 
   render(){
@@ -15,7 +21,7 @@ class Grid extends Component {
     )
     }
   const list = this.props.data.map(block =>
-    <div key= {block.id} className="card" style={{width: 220}}>
+    <div key= {block.id} className="card" style={style}>
       <a href={block.largeImageURL} target="_blank">
       <img className="card-img-top" src={block.largeImageURL} alt="Card"/>
       </a>
@@ -31,38 +37,3 @@ class Grid extends Component {
   }
 }
 export default Grid
-/*
-<Card key={block.id} style={style}>
-  <Avatar src={block.userImageURL} />
-  <a href={block.largeImageURL}>
-    <img
-      src={block.largeImageURL}
-      alt={block.user}
-      height="210"
-      width="350"
-    />
-  </a>
-  <br /><br />
-  <div className="card-data">
-    <ul>
-      <li>
-        <span role="img" aria-label="like">
-          😍  {block.likes}
-        </span>
-      </li>
-      <li>
-        <span role="img" aria-label="views">
-          🚥 {block.views}
-        </span></li>
-      <li>
-        <span role="img" aria-label="dls">
-          📥 {block.downloads}
-        </span></li>
-      <li>
-        <span role="img" aria-label="comments">
-        💬{block.comments}
-      </span></li>
-    </ul>
-  </div>
-</Card>
-*/

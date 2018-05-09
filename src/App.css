@@ -2,9 +2,9 @@
  * @Author: Ali
  * @Date:   2018-04-28T14:57:28+02:00
  * @Last modified by:   Ali
- * @Last modified time: 2018-05-03T20:56:53+02:00
+ * @Last modified time: 2018-05-09T21:28:47+02:00
  */
- body {
+ .container {
    display : flex;
    padding:0;
    margin:0;
