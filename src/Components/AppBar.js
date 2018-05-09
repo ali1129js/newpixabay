@@ -2,7 +2,7 @@
  * @Author: Ali
  * @Date:   2018-05-09T16:50:40+02:00
  * @Last modified by:   Ali
- * @Last modified time: 2018-05-09T21:07:14+02:00
+ * @Last modified time: 2018-05-09T21:12:05+02:00
  */
 
 import React, { Component } from 'react'
@@ -38,7 +38,7 @@ class AppBar extends Component {
   render(){
     return (
       <nav className="navbar sticky-top navbar-expand-lg navbar-light bg-light">
-        <a className="navbar-brand" href="https://pixabay.com" target="_blank">
+        <a className="navbar-brand" href="https://pixabay.com" target="_blank" rel="noopener noreferrer">
           <img src="https://pixabay.com/static/img/logo_square.png" width="30" height="30" className="d-inline-block align-top" alt="logo" />
           <span> Search PixaBay </span>
         </a>
