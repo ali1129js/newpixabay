@@ -1,18 +1,24 @@
 /**
  * @Author: Ali
- * @Date:   2018-05-08T13:16:56+02:00
+ * @Date:   2018-05-09T16:50:40+02:00
  * @Last modified by:   Ali
- * @Last modified time: 2018-05-08T13:48:02+02:00
+ * @Last modified time: 2018-05-09T16:56:08+02:00
  */
- import React from 'react';
- import AppBar from 'material-ui/AppBar';
 
+import React from 'react'
 
- const ghh = () => (
-   <AppBar
-     title="Title"
-     iconClassNameRight="muidocs-icon-navigation-expand-more"
-   />
- );
+const AppBar = () =>
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <a className="navbar-brand" href="#">Search PixaBay</a>
+      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span className="navbar-toggler-icon"></span>
+      </button>
 
- export default AppBar;
+      <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        <form className="form-inline my-2 my-lg-0">
+          <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+          <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+export default AppBar

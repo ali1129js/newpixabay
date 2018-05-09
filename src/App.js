@@ -2,11 +2,11 @@
  * @Author: Ali
  * @Date:   2018-04-25T22:06:52+02:00
  * @Last modified by:   Ali
- * @Last modified time: 2018-05-08T16:08:37+02:00
+ * @Last modified time: 2018-05-09T16:52:19+02:00
  */
 
-import React, { Component } from 'react'
-//import AppBar from './Components/AppBar'
+import React, { Component, Fragment } from 'react'
+import AppBar from './Components/AppBar'
 import Input from './Components/Input'
 import Grid from './Components/Grid'
 
@@ -52,15 +52,15 @@ handleSubmit(pixaBay){
       return <div className="loading">loading</div>
     }
     return(
-      <MuiThemeProvider theme={theme}>
-        <AppBar title="My AppBar" />
+      <Fragment>
+        <AppBar />
         <Input
           handleInput={this.handleInput.bind(this)}
           handleSubmit={this.handleSubmit.bind(this)}
         />
         <h4> {this.state.search} </h4>
         <Grid data={this.state.pixaBay.hits}/>
-      </MuiThemeProvider>
+      </Fragment>
     )
   }
 }
