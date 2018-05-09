@@ -2,12 +2,11 @@
  * @Author: Ali
  * @Date:   2018-04-25T22:06:52+02:00
  * @Last modified by:   Ali
- * @Last modified time: 2018-05-09T16:52:19+02:00
+ * @Last modified time: 2018-05-09T20:22:48+02:00
  */
 
 import React, { Component, Fragment } from 'react'
 import AppBar from './Components/AppBar'
-import Input from './Components/Input'
 import Grid from './Components/Grid'
 
 import './App.css'
@@ -53,10 +52,9 @@ handleSubmit(pixaBay){
     }
     return(
       <Fragment>
-        <AppBar />
-        <Input
-          handleInput={this.handleInput.bind(this)}
+        <AppBar
           handleSubmit={this.handleSubmit.bind(this)}
+          handleInput={this.handleInput.bind(this)}
         />
         <h4> {this.state.search} </h4>
         <Grid data={this.state.pixaBay.hits}/>

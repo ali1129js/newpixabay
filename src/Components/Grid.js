@@ -2,7 +2,7 @@
  * @Author: Ali
  * @Date:   2018-04-26T15:09:30+02:00
  * @Last modified by:   Ali
- * @Last modified time: 2018-05-09T16:53:26+02:00
+ * @Last modified time: 2018-05-09T20:25:54+02:00
  */
 import React,{ Component } from 'react'
 
@@ -15,8 +15,8 @@ class Grid extends Component {
     )
     }
   const list = this.props.data.map(block =>
-    <div className="card" style={{width: 220}}>
-      <a href={block.largeImageURL}>
+    <div key= {block.id} className="card" style={{width: 220}}>
+      <a href={block.largeImageURL} target="_blank">
       <img className="card-img-top" src={block.largeImageURL} alt="Card"/>
       </a>
       </div>
