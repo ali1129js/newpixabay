@@ -2,8 +2,13 @@
  * @Author: Ali
  * @Date:   2018-04-28T14:57:28+02:00
  * @Last modified by:   Ali
- * @Last modified time: 2018-05-09T21:28:47+02:00
+ * @Last modified time: 2019-01-13T16:18:19+01:00
  */
+.grid {
+  display: inline-block;
+  margin-left: 30px;
+}
+ /*
  .container {
    display : flex;
    padding:0;
@@ -16,7 +21,6 @@
     list-style-type: none;
      float: left;
  }
- /*
 margin: 25px 50px 75px 100px;
       top, right,bottom, left
  */
