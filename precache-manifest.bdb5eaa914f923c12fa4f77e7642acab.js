@@ -4,15 +4,15 @@ self.__precacheManifest = [
     "url": "/newpixabay/static/js/runtime~main.454591a2.js"
   },
   {
-    "revision": "c99a2407716deb2628cd",
-    "url": "/newpixabay/static/js/main.c99a2407.chunk.js"
+    "revision": "e910d196344c2597d93e",
+    "url": "/newpixabay/static/js/main.e910d196.chunk.js"
   },
   {
     "revision": "4e2972bab64b83944fe9",
     "url": "/newpixabay/static/js/1.4e2972ba.chunk.js"
   },
   {
-    "revision": "c99a2407716deb2628cd",
+    "revision": "e910d196344c2597d93e",
     "url": "/newpixabay/static/css/main.9c2b12ce.chunk.css"
   },
   {
@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/newpixabay/static/css/1.68555509.chunk.css"
   },
   {
-    "revision": "5c250157d055d300ae03e0393491f61a",
+    "revision": "d2072c8d7c290286ec6bc3b8604811ab",
     "url": "/newpixabay/index.html"
   }
 ];

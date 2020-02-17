@@ -1,7 +1,7 @@
 {
   "main.css": "/newpixabay/static/css/main.9c2b12ce.chunk.css",
-  "main.js": "/newpixabay/static/js/main.c99a2407.chunk.js",
-  "main.js.map": "/newpixabay/static/js/main.c99a2407.chunk.js.map",
+  "main.js": "/newpixabay/static/js/main.e910d196.chunk.js",
+  "main.js.map": "/newpixabay/static/js/main.e910d196.chunk.js.map",
   "static/css/1.68555509.chunk.css": "/newpixabay/static/css/1.68555509.chunk.css",
   "static/js/1.4e2972ba.chunk.js": "/newpixabay/static/js/1.4e2972ba.chunk.js",
   "static/js/1.4e2972ba.chunk.js.map": "/newpixabay/static/js/1.4e2972ba.chunk.js.map",
@@ -10,6 +10,6 @@
   "static/css/1.68555509.chunk.css.map": "/newpixabay/static/css/1.68555509.chunk.css.map",
   "static/css/main.9c2b12ce.chunk.css.map": "/newpixabay/static/css/main.9c2b12ce.chunk.css.map",
   "index.html": "/newpixabay/index.html",
-  "precache-manifest.efa5bf873ab085890701fef4af3ca117.js": "/newpixabay/precache-manifest.efa5bf873ab085890701fef4af3ca117.js",
+  "precache-manifest.bdb5eaa914f923c12fa4f77e7642acab.js": "/newpixabay/precache-manifest.bdb5eaa914f923c12fa4f77e7642acab.js",
   "service-worker.js": "/newpixabay/service-worker.js"
 }
