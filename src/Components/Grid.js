@@ -2,7 +2,7 @@
  * @Author: Ali
  * @Date:   2018-05-09T21:21:58+02:00
  * @Last modified by:   Ali
- * @Last modified time: 2020-02-17T17:58:33+01:00
+ * @Last modified time: 2020-02-17T18:19:22+01:00
  */
 
 import React, { Component } from "react";
@@ -19,7 +19,7 @@ class Grid extends Component {
             className="card-img-top"
             src={block.largeImageURL}
             alt="Card"
-            style={{ width: "400px", maxHeight: "400px" }}
+            style={{ width: "370px", maxHeight: "400px" }}
           />
         </a>
       </div>
