@@ -2,7 +2,7 @@
   "name": "pixabayfetch",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ali1129js.github.io/pixaBayFetchLive/",
+  "homepage": "https://ali1129js.github.io/newpixabay/",
   "dependencies": {
     "bootstrap": "^4.2.1",
     "react": "^16.7.0",
